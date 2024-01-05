@@ -6,5 +6,14 @@ export const routes: Routes = [
         loadComponent: () =>
             import('./landing/landing.component').then((m) => m.LandingComponent),
         data: { hideNavigationBar: true },
-    }
+    },
+    {
+        path: 'list-view',
+        loadComponent: () =>
+            import('./data-view/feature/list-items/list-items.component').then((m) => m.ListItemsComponent),
+    },
+    {
+        path: '**',
+        redirectTo: '',
+    },
 ];
