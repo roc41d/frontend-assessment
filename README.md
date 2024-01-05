@@ -1,27 +1,69 @@
-# ServiceburoFrontendInterview
+# Frontend Assessment
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.5.
+## How to run the project
 
-## Development server
+### Requirements
+```
+Node: v20.9.0
+NPM: v9.8.1
+Angular CLI: v17.0.9
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Frontend
+Clone the repository
 
-## Code scaffolding
+```
+git clone git@github.com:roc41d/frontend-assessment.git
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Switch to project folder
 
-## Build
+```
+cd frontend-assessment
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Install dependencies
 
-## Running unit tests
+```
+npm i
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Start local development server
 
-## Running end-to-end tests
+```
+ng serve
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+You can now access the app via [http://localhost:4200](http://localhost:4200)
 
-## Further help
+## Setup with Docker
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Additional Requirements
+
+Install and setup [Docker](https://www.docker.com)
+
+* [Linux](https://docs.docker.com/engine/install/ubuntu/)
+* [Windows](https://www.docker.com/products/docker-desktop)
+
+### Build image
+
+Switch to project folder
+
+```
+cd frontend-assessment
+```
+
+```
+docker build -t <username>/<app-name>:<tag> .
+
+Ex. docker build -t rocard/frontend-assessment:v1.0.0 .
+```
+
+### Run app
+```
+docker run -d -p <host-port>:<docker-port> <username>/<app-name>:<tag>
+
+Ex. docker run -d -p 8080:8080 rocard/frontend-assessment:v1.0.0
+```
+
+You can now access the app via [http://localhost:8080](http://localhost:8080)
