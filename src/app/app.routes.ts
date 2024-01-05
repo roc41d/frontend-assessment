@@ -13,6 +13,11 @@ export const routes: Routes = [
             import('./data-view/feature/list-items/list-items.component').then((m) => m.ListItemsComponent),
     },
     {
+        path: 'custom-directive',
+        loadComponent: () => 
+            import('./styled-div/custom-directive.component').then((m) => m.CustomDirectiveComponent)
+    },
+    {
         path: '**',
         redirectTo: '',
     },

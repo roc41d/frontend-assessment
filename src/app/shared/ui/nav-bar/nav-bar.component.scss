@@ -2,3 +2,31 @@ mat-toolbar {
     background-color: #2196f3;
     color: white;
 }
+
+.flexExpand {
+    flex: 1 1 auto;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 0.8em;
+    color: #fff;
+    padding: 0px 12px;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    background-color: #0961aa;
+}
+
+.active {
+    background-color: #0961aa;
+}
+
+.mr {
+    margin-right: 0.5em
+}

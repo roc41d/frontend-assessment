@@ -1,3 +1,8 @@
 <mat-toolbar [@fadeInOut]>
-    <span>Frontend Interview</span>
+    <span class="logo" [routerLink]="'/'">Frontend Interview</span>
+
+    <span class="flexExpand"></span>
+
+    <a class="nav-link mr" [routerLink]="'/list-view'" routerLinkActive="active">List View</a>
+    <a class="nav-link" [routerLink]="'/custom-directive'" routerLinkActive="active">Data View</a>
 </mat-toolbar>
