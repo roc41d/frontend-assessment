@@ -61,6 +61,7 @@ export class ListItemsComponent implements OnInit {
       .valueChanges
       .pipe(
         debounceTime(500),
+        distinctUntilChanged()
       )
       .subscribe((value) => {
         if(!value || value === '') {
